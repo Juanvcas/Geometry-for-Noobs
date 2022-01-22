@@ -5,31 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry to Noobs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/phone.css">
+    <!-- font-family: 'Lobster', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif; -->
 </head>
-<body>
+<body class="container">
     <header class="header">
-        <figure class="header__fig">
-            <img src="" alt="">
-        </figure>
-        <nav class="header__nav">
-            <ul class="nav__ul">
-                <li><a href="">Rectangle</a></li>
-                <li><a href="">Triangle</a></li>
-                <li><a href="">Circle</a></li>
+        <div class="header__logo">
+            <p>Geometry for Noobs</p>
+        </div>
+        <nav class="header__nav" onclick="menu()">
+            <ul class="nav__ul" id="nav__ul">
+                <li><a href="#calc-2d__sqr">Rectangle</a></li>
+                <li><a href="#calc-2d__trg">Triangle</a></li>
+                <li><a href="#calc-2d__crl">Circle</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="main__ttl">
-            <h1>Welcome to Geometry to Noobs, your study partner!</h1>
+            <h1>Welcome to Geometry for Noobs, your study partner!</h1>
             <p>Here, you'll can to calculate basic geometric figures!</p>
         </section>
         <section class="main__calc-2d">
             <h2>2D Figures</h2>
-            <section class="calc-2d__sqr">
+            <section class="calc-2d__sqr calc-2d__cont" id="calc-2d__sqr">
                 <h3>Squares and Rectangles</h3>
-                <form action="" class="sqr__form">
+                <form action="" class="sqr__form form">
                     <p>Put the values to calculate.</p>
                     <label for="sqr__width">
                         <span>Rectangle's width</span>
@@ -44,9 +50,9 @@
                 </form>
                 <section class="sqr__result" id="sqr__result"></section>
             </section>
-            <section class="calc-2d__trg">
+            <section class="calc-2d__trg calc-2d__cont" id="calc-2d__trg">
                 <h3>Triangles</h3>
-                <form action="" class="trg__form">
+                <form action="" class="trg__form form">
                     <p>Put the values to calculate.</p>
                     <label for="trg__side">
                         <span>Triangle's side</span>
@@ -61,9 +67,9 @@
                 </form>
                 <section class="trg__result" id="trg__result"></section>
             </section>
-            <section class="calc-2d__crl">
+            <section class="calc-2d__crl calc-2d__cont" id="calc-2d__crl">
                 <h3>Perfect Circle</h3>
-                <form action="" class="crl__form">
+                <form action="" class="crl__form form">
                     <p>Put the values to calculate.</p>
                     <label for="crl__radius">
                         <span>Circle's radius</span>
@@ -76,6 +82,7 @@
             </section>
         </section>
     </main>
-    <script src="./logic/main.js"></script>
+    <script src="./logic/calculate.js"></script>
+    <script src="./logic/nav.js"></script>
 </body>
 </html>
