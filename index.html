@@ -8,7 +8,74 @@
     <link rel="stylesheet" href="./css/phone.css">
 </head>
 <body>
-    
+    <header class="header">
+        <figure class="header__fig">
+            <img src="" alt="">
+        </figure>
+        <nav class="header__nav">
+            <ul class="nav__ul">
+                <li><a href="">Rectangle</a></li>
+                <li><a href="">Triangle</a></li>
+                <li><a href="">Circle</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__ttl">
+            <h1>Welcome to Geometry to Noobs, your study partner!</h1>
+            <p>Here, you'll can to calculate basic geometric figures!</p>
+        </section>
+        <section class="main__calc-2d">
+            <h2>2D Figures</h2>
+            <section class="calc-2d__sqr">
+                <h3>Squares and Rectangles</h3>
+                <form action="" class="sqr__form">
+                    <p>Put the values to calculate.</p>
+                    <label for="sqr__width">
+                        <span>Rectangle's width</span>
+                        <input type="number" name="sqr__width" id="sqr__width">
+                    </label>
+                    <label for="sqr__height">
+                        <span>Rectangle's height</span>
+                        <input type="number" name="sqr__height" id="sqr__height">
+                    </label>
+                    <button type="button" onclick="squarePerimeter()">Calcualate Perimeter</button>
+                    <button type="button" onclick="squareArea()">Calcualate Area</button>
+                </form>
+                <section class="sqr__result" id="sqr__result"></section>
+            </section>
+            <section class="calc-2d__trg">
+                <h3>Triangles</h3>
+                <form action="" class="trg__form">
+                    <p>Put the values to calculate.</p>
+                    <label for="trg__side">
+                        <span>Triangle's side</span>
+                        <input type="number" name="trg__side" id="trg__side">
+                    </label>
+                    <label for="trg__base">
+                        <span>Triangle's base</span>
+                        <input type="number" name="trg__base" id="trg__base">
+                    </label>
+                    <button type="button" onclick="trianglePerimeter()">Calcualate Perimeter</button>
+                    <button type="button" onclick="triangleArea()">Calcualate Area</button>
+                </form>
+                <section class="trg__result" id="trg__result"></section>
+            </section>
+            <section class="calc-2d__crl">
+                <h3>Perfect Circle</h3>
+                <form action="" class="crl__form">
+                    <p>Put the values to calculate.</p>
+                    <label for="crl__radius">
+                        <span>Circle's radius</span>
+                        <input type="number" name="crl__radius" id="crl__radius">
+                    </label>
+                    <button type="button" onclick="circlePerimeter()">Calcualate Perimeter</button>
+                    <button type="button" onclick="circleArea()">Calcualate Area</button>
+                </form>
+                <section class="crl__result" id="crl__result"></section>
+            </section>
+        </section>
+    </main>
     <script src="./logic/main.js"></script>
 </body>
 </html>
