@@ -29,17 +29,41 @@ const sqrResult = function(calc,measure,type,img) {
 
 // Isosceles Triangle
 function trianglePerimeter() {
-    const side = document.getElementById("trg__side");
+    const sideA = document.getElementById("trg__sideA");
+    const sideB = document.getElementById("trg__sideB");
     const base = document.getElementById("trg__base");
-    const calc = (side.value * 2) + parseFloat(base.value);
+    const calc = parseFloat(sideA.value) + parseFloat(sideB.value) + parseFloat(base.value);
     trgResult(calc.toFixed(2),"cm","perimeter","./src/triangle_perimeter.svg");
 }
 
+function triangleHeight() {
+    const sideA = parseFloat(document.getElementById("trg__sideA").value);
+    const sideB = parseFloat(document.getElementById("trg__sideB").value);
+    const base = parseFloat(document.getElementById("trg__base").value);
+    let height;
+    if (sideA === sideB) {
+        height = Math.sqrt((sideA ** 2) - ((base ** 2) / 4));
+    } else {
+        const semiPer = (sideA + sideB + base) / 2;
+        height = (2 / base) * (Math.sqrt(semiPer * (semiPer - base) * (semiPer - sideA) * (semiPer - sideB)));
+    }
+    trgResult(height.toFixed(2),"cm","height","./src/triangle_area.svg");
+}
+
 function triangleArea() {
-    const side = document.getElementById("trg__side");
-    const base = document.getElementById("trg__base");
-    const height = Math.sqrt((side.value ** 2) - ((base.value ** 2) / 4));
-    const calc = (base.value * height) / 2;
+    const sideA = parseFloat(document.getElementById("trg__sideA").value);
+    const sideB = parseFloat(document.getElementById("trg__sideB").value);
+    const base = parseFloat(document.getElementById("trg__base").value);
+    let height;
+    let calc;
+    if (sideA === sideB) {
+        height = Math.sqrt((sideA ** 2) - ((base ** 2) / 4));
+        calc = (base * height) / 2;
+    } else {
+        const semiPer = (sideA + sideB + base) / 2;
+        height = (2 / base) * (Math.sqrt(semiPer * (semiPer - base) * (semiPer - sideA) * (semiPer - sideB)));
+        calc = (1/2) * height * base;
+    }
     trgResult(calc.toFixed(2),"cm²","area","./src/triangle_area.svg");
 }
 

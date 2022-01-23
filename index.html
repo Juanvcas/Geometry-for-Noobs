@@ -54,15 +54,20 @@
                 <h3>Triangles</h3>
                 <form action="" class="trg__form form">
                     <p>Put the values to calculate.</p>
-                    <label for="trg__side">
-                        <span>Triangle's side</span>
-                        <input type="number" name="trg__side" id="trg__side">
+                    <label for="trg__sideA">
+                        <span>Triangle's side A</span>
+                        <input type="number" name="trg__sideA" id="trg__sideA">
+                    </label>
+                    <label for="trg__sideB">
+                        <span>Triangle's side B</span>
+                        <input type="number" name="trg__sideB" id="trg__sideB">
                     </label>
                     <label for="trg__base">
                         <span>Triangle's base</span>
                         <input type="number" name="trg__base" id="trg__base">
                     </label>
                     <button type="button" onclick="trianglePerimeter()">Calcualate Perimeter</button>
+                    <button type="button" onclick="triangleHeight()">Calcualate Height</button>
                     <button type="button" onclick="triangleArea()">Calcualate Area</button>
                 </form>
                 <section class="result" id="trg__result"></section>
