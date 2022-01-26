@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    background-image: url(../src/back_main.svg);
+    background-image: url(../../src/geometry_for_noobs/back_main.svg);
     background-size: 120%;
 }
 
@@ -37,7 +37,7 @@ body {
 .header__nav {
     width: 4rem;
     height: 4rem;
-    background-image: url(../src/menu_black_24dp.svg);
+    background-image: url(../../src/menu_black_24dp.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

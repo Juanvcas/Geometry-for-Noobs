@@ -5,14 +5,14 @@ function squarePerimeter() {
     const width = document.getElementById("sqr__width");
     const height = document.getElementById("sqr__height");
     const calc = (width.value * 2) + (height.value * 2);
-    sqrResult(calc.toFixed(2),"cm","perimeter","./src/square.svg");
+    sqrResult(calc.toFixed(2),"cm","perimeter","./src/geometry_for_noobs/square.svg");
 }
 
 function squareArea() {
     const width = document.getElementById("sqr__width");
     const height = document.getElementById("sqr__height");
     const calc = width.value * height.value;
-    sqrResult(calc.toFixed(2),"cm²","area","./src/square.svg");
+    sqrResult(calc.toFixed(2),"cm²","area","./src/geometry_for_noobs/square.svg");
 }
 
 const sqrResult = function(calc,measure,type,img) {
@@ -33,7 +33,7 @@ function trianglePerimeter() {
     const sideB = document.getElementById("trg__sideB");
     const base = document.getElementById("trg__base");
     const calc = parseFloat(sideA.value) + parseFloat(sideB.value) + parseFloat(base.value);
-    trgResult(calc.toFixed(2),"cm","perimeter","./src/triangle_perimeter.svg");
+    trgResult(calc.toFixed(2),"cm","perimeter","./src/geometry_for_noobs/triangle_perimeter.svg");
 }
 
 function triangleHeight() {
@@ -47,7 +47,7 @@ function triangleHeight() {
         const semiPer = (sideA + sideB + base) / 2;
         height = (2 / base) * (Math.sqrt(semiPer * (semiPer - base) * (semiPer - sideA) * (semiPer - sideB)));
     }
-    trgResult(height.toFixed(2),"cm","height","./src/triangle_area.svg");
+    trgResult(height.toFixed(2),"cm","height","./src/geometry_for_noobs/triangle_area.svg");
 }
 
 function triangleArea() {
@@ -64,7 +64,7 @@ function triangleArea() {
         height = (2 / base) * (Math.sqrt(semiPer * (semiPer - base) * (semiPer - sideA) * (semiPer - sideB)));
         calc = (1/2) * height * base;
     }
-    trgResult(calc.toFixed(2),"cm²","area","./src/triangle_area.svg");
+    trgResult(calc.toFixed(2),"cm²","area","./src/geometry_for_noobs/triangle_area.svg");
 }
 
 const trgResult = function(calc,measure,type,img) {
@@ -83,13 +83,13 @@ const trgResult = function(calc,measure,type,img) {
 function circlePerimeter() {
     const radius = document.getElementById("crl__radius");
     const calc = (radius.value * 2) * Math.PI;
-    crlResult(calc.toFixed(2),"cm","perimeter","./src/circle.svg");
+    crlResult(calc.toFixed(2),"cm","perimeter","./src/geometry_for_noobs/circle.svg");
 }
 
 function circleArea() {
     const radius = document.getElementById("crl__radius");
     const calc = (radius.value ** 2) * Math.PI;
-    crlResult(calc.toFixed(2),"cm²","area","./src/circle.svg");
+    crlResult(calc.toFixed(2),"cm²","area","./src/geometry_for_noobs/circle.svg");
 }
 
 const crlResult = function(calc,measure,type,img) {
