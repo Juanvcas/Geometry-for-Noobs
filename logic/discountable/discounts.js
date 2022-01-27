@@ -40,7 +40,7 @@ function applyCoupon(coupon) {
         result.innerText = ``;
     } else {
         disctInput.value = 0;
-        cupExistences.innerHTML = `Sorry, there are no more ${coupon.cupDiscount}% coupons.`
+        cupExistences.innerHTML = `* Sorry, there are no more ${coupon.cupDiscount}% coupons.`
     }
 }
 
@@ -56,17 +56,18 @@ function discounts(coupon) {
         if (coupon) {
             if (coupon.cupAmount >= 1) {
                 const calc = price * (1 - (discount * 0.01));
+                coupon.cupAmount--;
                 result.innerHTML = 
                 `
                 <h3>Price with discount</h3>
                 <p>The real price is: <b>$${calc.toFixed(2)}</b> with a <b>${discount}%</b> discount.</p>
+                <p><b>(${coupon.cupAmount})</b> coupons left.</p>
                 `;
-                coupon.cupAmount--;
             } else {
-                result.innerText = "Sorry, this coupon is not valid."
+                result.innerText = "* Sorry, this coupon is not valid."
             }
         } else {
-            result.innerText = "Please, select a coupon."
+            result.innerText = "* Please, select a coupon."
         }
     } else {
         trueValue.innerText = "* Please, insert a valid value."

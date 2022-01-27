@@ -4,37 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percentages and Discounts</title>
+    <title>Discountable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/discountable/phone.css">
+    <!-- font-family: 'Lobster', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif; -->
 </head>
 <body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="./index2.html">Discountable</a>
+        </div>
+        <nav class="header__nav" onclick="menu()">
+            <ul class="nav__ul" id="nav__ul">
+                <li><a href="./index.html">Geometry for Noobs</a></li>
+                <li><a href="">Coming soon</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="main">
-        <h1>Discounts</h1>
-        <h2>Here, you can calculate the discount.</h2>
-        <p>Put the values to calculate.</p>
-        <form action="" class="main__form">
-            <label for="price">
-                <span>Price</span>
-                <input type="number" name="price" id="price">
-                <p id="trueValue"></p>
-            </label>
-            <label for="discount">
-                <span>Discount</span>
-                <input type="number" name="discount" id="discount" disabled>
-                <p id="cupExistences"></p>
-            </label>
-            <select name="coupons" id="coupons" onchange="selectCoupon()">
-                <option value="" disabled selected hidden>Select Coupon</option>
-                <option value="20">20% Coupon</option>
-                <option value="15">15% Coupon</option>
-                <option value="10">10% Coupon</option>
-                <option value="5">5% Coupon</option>
-            </select>
-            <button type="button" onclick="discounts(selectCoupon())">Calculate Real Price</button>
-        </form>
-        <section id="result" class="result">
-            
+        <section class="main__ttl">
+            <h1>Discounts</h1>
+            <h2>Here, you can calculate the discount.</h2>
+            <p>Put the values to calculate.</p>
+        </section>
+        <section class="main__disct">
+            <h3>Discount</h3>
+            <form action="" class="form">
+                <p>Put values to calculate</p>
+                <label for="price">
+                    <span>Original price</span>
+                    <input type="number" name="price" id="price">
+                    <p id="trueValue"></p>
+                </label>
+                <label for="discount">
+                    <span>Discount</span>
+                    <div class="discount__sect">
+                        <input type="text" name="discount" id="discount" disabled>
+                    <select name="coupons" id="coupons" onchange="selectCoupon()">
+                        <option value="" disabled selected hidden>Select Coupon</option>
+                        <option value="20">20% Coupon</option>
+                        <option value="15">15% Coupon</option>
+                        <option value="10">10% Coupon</option>
+                        <option value="5">5% Coupon</option>
+                    </select>
+                    </div>
+                    <p id="cupExistences"></p>
+                </label>
+                <button type="button" onclick="discounts(selectCoupon())">Calculate Real Price</button>
+            </form>
+            <section id="result" class="result">
+            </section>
         </section>
     </main>
     <script src="./logic/discountable/discounts.js"></script>
+    <script src="./logic/nav.js"></script>
 </body>
 </html>
