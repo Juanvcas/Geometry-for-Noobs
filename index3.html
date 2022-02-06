@@ -17,7 +17,7 @@
 <body class="container">
     <header class="header">
         <div class="header__logo">
-            <a href="./index2.html">To Average</a>
+            <a href="./index3.html">To Average</a>
         </div>
         <nav class="header__nav" onclick="menu()">
             <ul class="nav__ul" id="nav__ul">
@@ -37,7 +37,7 @@
                 <form action="" class="arth__form form">
                     <p>Put the value to add to the list.</p>
                     <label for="arth__inp">
-                        <span>Insert Values</span>
+                        <span>Insert Value:</span>
                         <input type="number" name="arth__inp" id="arth__inp">
                         <p id="arth__error"></p>
                     </label>
@@ -58,8 +58,8 @@
                 <form action="" class="median__form form">
                     <p>Put the value to add to the list.</p>
                     <label for="med__inp">
-                        <span>Insert Value</span>
-                        <input type="text" name="med__inp" id="med__inp">
+                        <span>Insert Value:</span>
+                        <input type="number" name="med__inp" id="med__inp">
                         <p id="med__error"></p>
                     </label>
                     <div class="form__butt med__butt">
@@ -74,6 +74,27 @@
                 </div>
                 <article id="med__result" class="result"></article>
             </section>
+            <section class="avgs__moda avgs">
+                <h2>Moda</h2>
+                <form action="" class="moda__form form">
+                    <p>Put the value to add to the list.</p>
+                    <label for="moda__inp">
+                        <span>Inser Value:</span>
+                        <input type="text" name="moda__inp" id="moda__inp">
+                        <div id="moda__error"></div>
+                    </label>
+                    <div class="form__butt moda__butt">
+                        <button type="button" onclick="addModaValues()">Add Value</button>
+                        <button type="button" onclick="clearModaValues()">Clear Values</button>
+                    </div>
+                    <section id="moda__values" class="values"></section>
+                </form>
+                <div class="moda__calc calc">
+                    <button type="button" onclick="modaResult()">Calculate Moda</button>
+                    <p id="result__error"></p>
+                </div>
+                <article id="result__out"></article>
+            </section>
         </div>
     </main>
     <footer class="footer">
@@ -83,6 +104,7 @@
     </footer>
     <script src="./logic/to_average/arithmetic_mean.js"></script>
     <script src="./logic/to_average/median.js"></script>
+    <script src="./logic/to_average/moda.js"></script>
     <script src="./logic/nav.js"></script>
 </body>
 </html>
