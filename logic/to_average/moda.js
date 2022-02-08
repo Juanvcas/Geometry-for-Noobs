@@ -53,8 +53,8 @@ function moda() {
 }
 
 function modaResult() {
-    const resultOutput = document.getElementById("result__out");
-    const resultError = document.getElementById("result__error");
+    const resultOutput = document.getElementById("moda__result");
+    const resultError = document.getElementById("modaCalc__error");
 
     const sortValues = moda().sort(function(a,b){return b.amount - a.amount});
     console.log(sortValues);

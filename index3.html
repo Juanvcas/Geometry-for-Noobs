@@ -91,9 +91,30 @@
                 </form>
                 <div class="moda__calc calc">
                     <button type="button" onclick="modaResult()">Calculate Moda</button>
-                    <p id="result__error"></p>
+                    <p id="modaCalc__error"></p>
                 </div>
-                <article id="result__out"></article>
+                <article id="moda__result" class="result"></article>
+            </section>
+            <section class="avgs__geo avgs">
+                <h2>Geometric Median</h2>
+                <form action="" class="geo__form form">
+                    <p>Put just the percentage value to add to the list.</p>
+                    <label for="geo__inp">
+                        <span>Inser Value:</span>
+                        <input type="number" name="geo__inp" id="geo__inp">
+                        <div id="geo__error"></div>
+                    </label>
+                    <div class="form__butt geo__butt">
+                        <button type="button" onclick="addGeoValues()">Add Value</button>
+                        <button type="button" onclick="clearGeoValues()">Clear Values</button>
+                    </div>
+                    <section id="geo__values" class="values"></section>
+                </form>
+                <div class="geo__calc calc">
+                    <button type="button" onclick="geoResult()">Calculate Moda</button>
+                    <p id="geoCalc__error"></p>
+                </div>
+                <article id="geo__result" class="result"></article>
             </section>
         </div>
     </main>
@@ -105,6 +126,7 @@
     <script src="./logic/to_average/arithmetic_mean.js"></script>
     <script src="./logic/to_average/median.js"></script>
     <script src="./logic/to_average/moda.js"></script>
+    <script src="./logic/to_average/geometric_mean.js"></script>
     <script src="./logic/nav.js"></script>
 </body>
 </html>

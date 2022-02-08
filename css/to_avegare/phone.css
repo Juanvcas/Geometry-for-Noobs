@@ -83,6 +83,11 @@ body {
     color: white;
 }
 
+.avgs__geo {
+    background-color: darkmagenta;
+    color: white;
+}
+
 .form {
     width: 100%;
     height: auto;
@@ -144,6 +149,11 @@ body {
     color: white;
 }
 
+.geo__butt > button {
+    background-color: rgb(207, 69, 207);
+    color: white;
+}
+
 .values {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
@@ -186,6 +196,11 @@ body {
 
 .moda__calc > button {
     background-color: rgb(240, 163, 108);
+    color: white;
+}
+
+.geo__calc > button {
+    background-color: rgb(207, 69, 207);
     color: white;
 }
 
