@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economy Mean</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@300;400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/economy_mean/phone.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- font-family: 'Lobster', cursive;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif; -->
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="./index3.html">Economy Mean</a>
+        </div>
+        <nav class="header__nav">
+            <div class="nav__menu" onclick="menu()"></div>
+            <ul class="nav__ul" id="nav__ul">
+                <li><a href="./index.html">Geometry for Noobs</a></li>
+                <li><a href="./index2.html">Discountable</a></li>
+                <li><a href="./index3.html">To Agerage</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main__ttl">
+            <h1>Economy Mean</h1>
+            <p>Here, you can calculate the salary's media.</p>
+        </section>
+        <section class="main__eco">
+            <form action="" class="form">
+                <p>Add people to the list to calculate</p>
+                <label for="nameValue">
+                    <span>Name</span>
+                    <input type="text" name="nameValue" id="nameValue">
+                    <div id="nameError"></div>
+                </label>
+                <label for="salaryValue">
+                    <span>Salary</span>
+                    <input type="number" name="salaryValue" id="salaryValue">
+                    <div id="salaryError"></div>
+                </label>
+                <label for="overheadValue">
+                    <span>Overhead</span>
+                    <input type="number" name="overheadValue" id="overheadValue">
+                    <div id="overheadError"></div>
+                </label>
+                <label for="savingValue">
+                    <span>Saving capacity</span>
+                    <div class="saving__sect">
+                        <input type="number" name="savingValue" id="savingValue" disabled>
+                        <select name="salarySaving" id="salarySaving" onchange="selectSaving()">
+                            <option value="" disabled selected hidden>Select Coupon</option>
+                            <option value="30">30% Savings</option>
+                            <option value="25">25% Savings</option>
+                            <option value="20">20% Savings</option>
+                            <option value="15">15% Savings</option>
+                            <option value="10">10% Savings</option>
+                            <option value="5">5% Savings</option>
+                        </select>
+                    </div>
+                    <div id="savingError"></div>
+                </label>
+                <button type="button" onclick="addPerson()">Add Peron</button>
+                <button type="button" onclick="clearList()">Clear Values</button>
+            </form>
+            <section id="people__list" class="list"></section>
+            <section class="result">
+                <div class="result__calc">
+                    <button type="button" onclick="salaryMedian()">Calculate Median</button>
+                    <button type="button" onclick="savingMedian()">Calculate Saving Median</button>
+                    <button type="button" onclick="topSalary()">Top Salary</button>
+                </div>
+                <div id="result__error"></div>
+                <section id="result__out"></section>
+                <section id="result__out2"></section>
+                <section id="result__out3"></section>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="footer__sect">
+            <p>Developed by: Juan Vasquez</p>
+        </section>
+    </footer>
+    <script src="./logic/economy_mean/person.js"></script>
+    <script src="./logic/economy_mean/salaries.js"></script>
+    <script src="./logic/economy_mean/analysis.js"></script>
+    <script src="./logic/nav.js"></script>
+</body>
+</html>

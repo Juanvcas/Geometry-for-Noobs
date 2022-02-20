@@ -21,6 +21,11 @@
 }
 
 .header__nav {
+    width: auto;
+    height: auto;
+}
+
+.nav__menu {
     width: 4rem;
     height: 4rem;
     background-image: url(../src/menu_black_24dp.svg);
@@ -58,10 +63,8 @@
         position: relative;
     }
 
-    .header__nav {
-        width: 0;
-        height: 0;
-        background-image: none;
+    .nav__menu {
+        display: none;
     }
     
     .nav__ul {
